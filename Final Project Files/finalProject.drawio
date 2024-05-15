@@ -1,0 +1,137 @@
+<mxfile host="app.diagrams.net" modified="2024-04-11T21:33:11.090Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="f1V6Lrj2D_HxEHeunkTA" version="24.2.3" type="device" pages="3">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Planning Page">
+    <mxGraphModel dx="1235" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="y6nRemKXe6i41wav9jgi-1" value="Create tracking system for practice sessions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y6nRemKXe6i41wav9jgi-0" value="Create query system to pull practice records by keyword" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y6nRemKXe6i41wav9jgi-28" value="Identify necessary system resources" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2MhrtMPncrbtHRbLO9N0-1" value="Create a statistical analysis page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ZviDnewObpGiFVqPdqel" name="Keywords">
+    <mxGraphModel dx="1450" dy="930" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-1" value="&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Time spent&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Day&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Week&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Month&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Year&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Average (over time)&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Mean&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Median&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;User defined Label&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=18;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="-40" width="200" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-2" value="&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Long Tones&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Articulation&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Embouchure&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Fingering&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Altissimo&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Bending Notes&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Vibrato&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Slap-tonguing&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Double-tonguing&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=18;align=left;" vertex="1" parent="1">
+          <mxGeometry x="720" y="-40" width="200" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-3" value="&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Fingering/Fretting accuracy&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Speed&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Chord composition&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Vibrato&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Setting amplifier&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Bar chords&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Bending Notes&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=18;align=left;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-40" width="200" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-8" value="General Keywords" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="-120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-9" value="Music Fundamental Keywords" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="-120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-11" value="Guitar Keywords" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-12" value="Saxophone Keywords" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="760" y="-120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VR-OjBBF8Hm6MfclyQEk-14" value="&lt;ul style=&quot;font-size: 18px;&quot;&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Rhythm&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Reading sheet music&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Ear training&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Scales&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Improvising&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Composition&lt;/li&gt;&lt;li style=&quot;font-size: 18px;&quot;&gt;Phrasing&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=18;align=left;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-40" width="200" height="400" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="d_PKeW_5sVOhmi4q_biC" name="Screenflow Layout">
+    <mxGraphModel dx="600" dy="505" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zINcAdPyxySABGzkGwNA-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-4" target="zINcAdPyxySABGzkGwNA-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-4" target="zINcAdPyxySABGzkGwNA-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-4" target="zINcAdPyxySABGzkGwNA-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-4" value="Landing Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="719" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-6" value="List View Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="719" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-7" value="Logging Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-9" value="Calendar View" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="879" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-11" value="Statistics Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="558" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="839" y="59.999999999999986" as="sourcePoint" />
+            <mxPoint x="1040" y="60.67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-13" value="Sortable by statistics keywords, date, instrument, techniques" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="558" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-14" target="zINcAdPyxySABGzkGwNA-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-14" value="Sortable by statistics keywords, date, instrument, techniques" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="719" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-15" target="zINcAdPyxySABGzkGwNA-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-15" value="&lt;div&gt;Daily, weekly, monthly views&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="879" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-16" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="517.5" y="59.999999999999986" as="sourcePoint" />
+            <mxPoint x="718.5" y="60.67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-17" value="Settings Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-21" value="Session View Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="360" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zINcAdPyxySABGzkGwNA-7" target="zINcAdPyxySABGzkGwNA-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1075" y="240" as="sourcePoint" />
+            <mxPoint x="1125" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1100" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-27" value="Session Edit Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zINcAdPyxySABGzkGwNA-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="zINcAdPyxySABGzkGwNA-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1100" y="400" as="sourcePoint" />
+            <mxPoint x="1150" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
