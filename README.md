@@ -1,3 +1,1 @@
-# Visit the wiki for more information
-
-## [Wiki](https://github.com/EvanYohe/SessionManager/wiki)
+# [Visit the wiki for more information](https://github.com/EvanYohe/SessionManager/wiki)
