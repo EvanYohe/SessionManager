@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Argument{
 
-    public ArrayList<String> arguments;
+    private ArrayList<String> arguments;
 
     Argument(ArrayList<String> arguments){
 

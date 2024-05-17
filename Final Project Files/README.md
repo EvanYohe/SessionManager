@@ -30,7 +30,7 @@ My goal for this project is to have a fully functioning practice tracking applic
 - 
 - 
 - 
--  
+- 
 - 
 - 
 
