@@ -1,8 +1,8 @@
 package com.finalproject.session_manager;
+
 import java.sql.Time;
 import java.util.Date;
 import java.util.ArrayList;
-
 
 // Session Object Data Structure
 public class Session {
@@ -15,6 +15,7 @@ public class Session {
     private Time duration;
 
     Session(String sessionID, ArrayList<String> keywords, ArrayList<Topic> Topic, Date date, Time time, Time duration) {
+
         this.sessionID = sessionID;
         this.keywords = keywords;
         this.Topic = Topic;
@@ -24,53 +25,68 @@ public class Session {
     }
 
     public String getSessionID() {
+
         return sessionID;
     }
 
-    public void setSessionID(String sessionID) {
+    public String setSessionID(String sessionID) {
+
         this.sessionID = sessionID;
+        return sessionID;
     }
 
     public ArrayList<String> getKeywords() {
+
         return keywords;
     }
 
-    public void setKeywords(ArrayList<String> keywords) {
+    public ArrayList<String> setKeywords(ArrayList<String> keywords) {
+
         this.keywords = keywords;
+        return keywords;
     }
 
     public ArrayList<Topic> getTopic() {
+
         return Topic;
     }
 
-    public void setTopic(ArrayList<Topic> topic) {
+    public ArrayList<Topic> setTopic(ArrayList<Topic> topic) {
+
         Topic = topic;
+        return topic;
     }
 
     public Date getDate() {
+
         return date;
     }
 
-    public void setDate(Date date) {
+    public Date setDate(Date date) {
+
         this.date = date;
+        return date;
     }
 
     public Time getTime() {
+
         return time;
     }
 
-    public void setTime(Time time) {
+    public Time setTime(Time time) {
+
         this.time = time;
+        return time;
     }
 
     public Time getDuration() {
+
         return duration;
     }
 
-    public void setDuration(Time duration) {
+    public Time setDuration(Time duration) {
+
         this.duration = duration;
+        return duration;
     }
-
-    
-
 }

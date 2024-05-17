@@ -10,29 +10,30 @@ import java.util.ArrayList;
 
 public class Main {
 
+    // main program loop
     public static void main(String[] args) {
-        
+
+        CommandParser commandParser = new CommandParser();
         Scanner scanner = new Scanner(System.in);
         banner();
-        
-        for(prompt(); scanner.hasNextLine(); prompt()){
 
-            ArrayList<String> argumentList = new ArrayList<>();
-            Command command = new Command(scanner.nextLine().replaceAll("\n", " "),argumentList, false, false);
-            CommandParser commandParser = new CommandParser(command);
+        for (prompt(); scanner.hasNextLine(); prompt()) {
             
-            while(command.isCommandProcessed() == false){
-                
+            ArrayList<String> argumentList = new ArrayList<>();
+            Command command = new Command(scanner.nextLine().replaceAll("\n", " "), argumentList, false, false);
+
+            while (command.isCommandProcessed() == false) {
+
                 commandParser.parse(command, scanner);
-                
+
             }
         }
     }
 
     // FINISHED
-    public static void banner(){
+    // I wanted a banner
+    public static void banner() {
 
-        // I wanted a banner
         System.out.println("  ___            _          __  __                             ");
         System.out.println(" / __| ___ _____(_)___ _ _ |  \\/  |__ _ _ _  __ _ __ _ ___ _ _ ");
         System.out.println(" \\__ \\/ -_|_-<_-< / _ \\ ' \\| |\\/| / _` | ' \\/ _` / _` / -_) '_|");
@@ -40,11 +41,11 @@ public class Main {
         System.out.println("                                                 |___/         ");
         System.out.println("You can type 'help' for a list of commands or 'exit' to quit.");
         System.out.println("Otherwise, enter a command:");
-
     }
 
     // FINISHED
-    public static void prompt(){
+    // simple prompt for the program
+    public static void prompt() {
 
         System.out.print("session-manager> ");
     }
