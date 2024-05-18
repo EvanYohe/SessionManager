@@ -15,6 +15,7 @@ I did **not** cite any sources from the Java documentation however it was used *
 - https://stackoverflow.com/questions/17637032/bufferedreader-vs-console-vs-scanner (Picking the best input method. 5/10/24)
 - https://stackoverflow.com/questions/2231369/scanner-vs-bufferedreader?rq=1 (Picking the best input method. 5/10/24)
 - https://stackoverflow.com/questions/12396765/continuous-input-commands (Stole the for loop from the top. 5/16/24)
+- http://www.mit.edu/~6.005/fa09/resources/avoid-dependent-code.html (Writing OS independent file handling. 5/18/24)
 
 ## Jackson Library Rescources
 - 

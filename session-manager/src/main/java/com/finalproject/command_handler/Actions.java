@@ -1,11 +1,20 @@
 package com.finalproject.command_handler;
 
+import java.util.Scanner;
+
+import com.finalproject.data_pipe.FileHandler;
+
 public class Actions {
 
     // TODO
     // creates a session and adds to stored sessions
-    public static void create(Command command) {
+    public static void create(Command command, Scanner scanner) {
 
+        System.out.println("Create a new session with the following arguments:");
+        System.out.println("| Date | Time | Duration | Keyword(s) | Topic(s) |");
+        System.out.println("Example: create 2021-12-31 12:00:00 01:00:00 Java OOP");
+        CommandParser.parseArguments(command, scanner);
+        System.out.println(command.getArguments());
     }
 
     // TODO
@@ -27,43 +36,14 @@ public class Actions {
     }
 
     // FINISHED
-    // displays the help menu
-    public static void help() {
-
-        String[][] tableData = {
-
-            { "create", "Create a new session", "Date Time Duration Keyword(s) Topic(s)" },
-            { "delete", "Delete a session by ID", "sessionID" },
-            { "list", "Display a list sessions", "Range/Keyword/Topic will be prompted for filtering." },
-            { "edit", "Edit a session by ID", "sessionID" },
-            { "help", "Display this help message", "" },
-            { "exit", "Exit the program", "" }
-        };
-
-        String format = "| %-8s | %-26s | %-51s |%n";
-
-        System.out.format(
-                "+----------+----------------------------+-----------------------------------------------------|%n");
-
-        System.out.format(
-                "| Command  | Description                | Argument(s)                                         |%n");
-
-        System.out.format(
-                "+----------+----------------------------+-----------------------------------------------------|%n");
-
-        for (int i = 0; i < 6; i++) {
-
-            System.out.format(format, tableData[i][0], tableData[i][1], tableData[i][2]);
-        }
-
-        System.out.format(
-                "+----------+----------------------------+-----------------------------------------------------|%n");
-    }
-
-    // FINISHED
     // exits the program
     public static void exit() {
 
+        if (FileHandler.isFileUnloaded() == false) {
+
+            FileHandler.unloadFile();
+        }
+        
         System.out.println("Exiting...");
         System.exit(0);
     }

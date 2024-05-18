@@ -3,50 +3,33 @@ package com.finalproject;
 // Module based imports
 import com.finalproject.command_handler.Command;
 import com.finalproject.command_handler.CommandParser;
+import com.finalproject.data_pipe.FileHandler;
 
 // Java based imports
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
     // main program loop
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        CommandParser commandParser = new CommandParser();
-        Scanner scanner = new Scanner(System.in);
-        banner();
+        // Scanner scanner = new Scanner(System.in);
+        // OutputFormatter.banner();
 
-        for (prompt(); scanner.hasNextLine(); prompt()) {
+        // for (OutputFormatter.prompt(); scanner.hasNextLine(); OutputFormatter.prompt()) {
             
-            ArrayList<String> argumentList = new ArrayList<>();
-            Command command = new Command(scanner.nextLine().replaceAll("\n", " "), argumentList, false, false);
+        //     ArrayList<String> argumentList = new ArrayList<>();
+        //     Command command = new Command(scanner.nextLine().replaceAll("\n", " "), argumentList, false, false);
 
-            while (command.isCommandProcessed() == false) {
+        //     while (command.isCommandProcessed() == false) {
 
-                commandParser.parse(command, scanner);
+        //         CommandParser.parseCommand(command, scanner);
 
-            }
-        }
+        //     }
+        // }
     }
 
-    // FINISHED
-    // I wanted a banner
-    public static void banner() {
-
-        System.out.println("  ___            _          __  __                             ");
-        System.out.println(" / __| ___ _____(_)___ _ _ |  \\/  |__ _ _ _  __ _ __ _ ___ _ _ ");
-        System.out.println(" \\__ \\/ -_|_-<_-< / _ \\ ' \\| |\\/| / _` | ' \\/ _` / _` / -_) '_|");
-        System.out.println(" |___/\\___/__/__/_\\___/_||_|_|  |_\\__,_|_||_\\__,_\\__, \\___|_|  ");
-        System.out.println("                                                 |___/         ");
-        System.out.println("You can type 'help' for a list of commands or 'exit' to quit.");
-        System.out.println("Otherwise, enter a command:");
-    }
-
-    // FINISHED
-    // simple prompt for the program
-    public static void prompt() {
-
-        System.out.print("session-manager> ");
-    }
 }

@@ -1,32 +1,20 @@
 package com.finalproject.command_handler;
 
-import com.finalproject.Main;
+import com.finalproject.output_formatter.OutputFormatter;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class CommandParser {
 
-    private Command command;
-
-    public CommandParser() {}
-
-    public CommandParser(Command command) {
-
-        this.command = command;
-    }
-
     // WIP
-    public void parse(Command command, Scanner scanner) {
+    public static void parseCommand(Command command, Scanner scanner) {
 
         switch (command.getCommand()) {
 
             case "create":
 
-                System.out.println("Create a new session with the following arguments:");
-                System.out.println("| Date | Time | Duration | Keyword(s) | Topic(s) |");
-                System.out.println("Example: create 2021-12-31 12:00:00 01:00:00 Java OOP");
-                parseArguments(command, scanner);
+                Actions.create(command, scanner);
                 command.setCommandProcessed(true);
                 break;
 
@@ -50,7 +38,7 @@ public class CommandParser {
 
             case "help":
 
-                Actions.help();
+                OutputFormatter.help();
                 command.setCommandProcessed(true);
                 break;
 
@@ -67,10 +55,10 @@ public class CommandParser {
     }
 
     // WIP
-    public void parseArguments(Command command, Scanner scanner) {
+    public static void parseArguments(Command command, Scanner scanner) {
 
         System.out.println("Enter command argument(s) separated by spaces:");
-        Main.prompt();
+        OutputFormatter.prompt();
 
         String arguments = scanner.nextLine();
 

@@ -17,7 +17,6 @@ public class Command {
         this.command = command;
         this.isCommandProcessed = isCommandProcessed;
         this.isArgumentsProcessed = isArgumentsProcessed;
-
     }
 
     public Command(String command, ArrayList<String> arguments, boolean isCommandProcessed,
