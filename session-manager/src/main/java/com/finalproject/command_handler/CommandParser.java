@@ -8,19 +8,19 @@ import java.util.StringTokenizer;
 public class CommandParser {
 
     // WIP
-    public static void parseCommand(Command command, Scanner scanner) {
+    public static void parseCommand(Command command, Scanner userInput, Scanner fileReader) {
 
         switch (command.getCommand()) {
 
             case "create":
 
-                Actions.create(command, scanner);
+                Actions.create(command, userInput, fileReader);
                 command.setCommandProcessed(true);
                 break;
 
             case "delete":
 
-                parseArguments(command, scanner);
+                parseArguments(command, userInput);
                 command.setCommandProcessed(true);
                 break;
 

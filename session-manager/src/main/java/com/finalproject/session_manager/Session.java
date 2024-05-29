@@ -9,16 +9,16 @@ public class Session {
 
     private String sessionID;
     private ArrayList<String> keywords;
-    private ArrayList<Topic> Topic;
+    private ArrayList<Topic> topics;
     private Date date;
     private Time time;
     private Time duration;
 
-    Session(String sessionID, ArrayList<String> keywords, ArrayList<Topic> Topic, Date date, Time time, Time duration) {
+    public Session(Date date, Time time, Time duration, ArrayList<String> keywords, ArrayList<Topic> topics, String sessionID) {
 
         this.sessionID = sessionID;
         this.keywords = keywords;
-        this.Topic = Topic;
+        this.topics = topics;
         this.date = date;
         this.time = time;
         this.duration = duration;
@@ -48,13 +48,13 @@ public class Session {
 
     public ArrayList<Topic> getTopic() {
 
-        return Topic;
+        return topics;
     }
 
-    public ArrayList<Topic> setTopic(ArrayList<Topic> topic) {
+    public ArrayList<Topic> setTopic(ArrayList<Topic> topics) {
 
-        Topic = topic;
-        return topic;
+        this.topics = topics;
+        return topics;
     }
 
     public Date getDate() {

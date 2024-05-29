@@ -4,32 +4,32 @@ package com.finalproject;
 import com.finalproject.command_handler.Command;
 import com.finalproject.command_handler.CommandParser;
 import com.finalproject.data_pipe.FileHandler;
+import com.finalproject.output_formatter.OutputFormatter;
 
 // Java based imports
 import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
     // main program loop
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        // Scanner scanner = new Scanner(System.in);
-        // OutputFormatter.banner();
+        Scanner userInput = new Scanner(System.in);
+        Scanner fileReader = FileHandler.loadFile();
+        OutputFormatter.banner();
 
-        // for (OutputFormatter.prompt(); scanner.hasNextLine(); OutputFormatter.prompt()) {
+        for (OutputFormatter.prompt(); userInput.hasNextLine(); OutputFormatter.prompt()) {
             
-        //     ArrayList<String> argumentList = new ArrayList<>();
-        //     Command command = new Command(scanner.nextLine().replaceAll("\n", " "), argumentList, false, false);
+            ArrayList<String> argumentList = new ArrayList<>();
+            Command command = new Command(userInput.nextLine().replaceAll("\n", " "), argumentList, false, false);
 
-        //     while (command.isCommandProcessed() == false) {
+            while (command.isCommandProcessed() == false) {
 
-        //         CommandParser.parseCommand(command, scanner);
+                CommandParser.parseCommand(command, userInput, fileReader);
 
-        //     }
-        // }
+            }
+        }
     }
 
 }
