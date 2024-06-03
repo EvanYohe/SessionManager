@@ -19,8 +19,14 @@ I did **not** cite any sources from the Java documentation however it was used *
 ## File Handling Resources
 - http://www.mit.edu/~6.005/fa09/resources/avoid-dependent-code.html (Writing OS independent file handling. 5/18/24)
 - https://stackoverflow.com/questions/228477/how-do-i-programmatically-determine-operating-system-in-java (Get home directory of operating system. 5/24/24)
-- https://stackoverflow.com/questions/15571496/how-to-check-if-a-folder-exists (Check if directory exists 5/25/24)
-- https://docs.oracle.com/javase/tutorial/essential/io/file.html (Creation of a file and error handling 5/26/24)
+- https://stackoverflow.com/questions/15571496/how-to-check-if-a-folder-exists (Check if directory exists. 5/25/24)
+- https://docs.oracle.com/javase/tutorial/essential/io/file.html (Creation of a file and error handling. 5/26/24)
 
-## Jackson Library Rescources
-- 
+## Jackson Library Resources
+- https://mkyong.com/java/convert-java-objects-to-json-with-jackson/ (Basic writing JSON data to file. 5/29/24)
+- https://stackoverflow.com/questions/58888004/how-to-append-to-json-with-java-and-jackson (Apparently the Jackson library doesn't do appending JSON data to a collection, so I used this as my main source for building JSON data. 5/29/24)
+
+## Gson Library Resources
+- https://www.javadoc.io/doc/com.google.code.gson/gson/latest/com.google.gson/com/google/gson/package-summary.html (Testing Gson library. 5/30/24)
+- https://github.com/google/gson/blob/main/UserGuide.md (Testing Gson library. 5/30/24)
+- https://stackoverflow.com/questions/18544133/parsing-json-array-into-java-util-list-with-gson (This fixed my parsing to arrayList<Session> problem. 6/2/24)

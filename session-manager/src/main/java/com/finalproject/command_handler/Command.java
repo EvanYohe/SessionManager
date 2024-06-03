@@ -1,8 +1,11 @@
 package com.finalproject.command_handler;
 
+// Module based imports
+
+// Java based imports
 import java.util.ArrayList;
 
-// command object data structure
+// Command object data structure
 public class Command {
 
     private String command;
@@ -10,19 +13,10 @@ public class Command {
     private boolean isCommandProcessed = false;
     private boolean isArgumentsProcessed = false;
 
-    public Command() {}
-    
-    public Command(String command, boolean isCommandProcessed, boolean isArgumentsProcessed) {
-
-        this.command = command;
-        this.isCommandProcessed = isCommandProcessed;
-        this.isArgumentsProcessed = isArgumentsProcessed;
-    }
-
     public Command(String command, ArrayList<String> arguments, boolean isCommandProcessed,
             boolean isArgumentsProcessed) {
 
-        this.command = command;
+        this.command = command.trim().toLowerCase();
         this.arguments = arguments;
         this.isCommandProcessed = isCommandProcessed;
         this.isArgumentsProcessed = isArgumentsProcessed;

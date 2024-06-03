@@ -1,35 +1,50 @@
 package com.finalproject;
 
-// Module based imports
 import com.finalproject.command_handler.Command;
 import com.finalproject.command_handler.CommandParser;
-import com.finalproject.data_pipe.FileHandler;
+import com.finalproject.data_pipe.ReadWriteData;
 import com.finalproject.output_formatter.OutputFormatter;
+import com.finalproject.session_manager.Session;
 
-// Java based imports
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
 
-    // main program loop
+    // Main program loop
     public static void main(String[] args) {
 
-        Scanner userInput = new Scanner(System.in);
-        Scanner fileReader = FileHandler.loadFile();
+        try {
+            // on startup, call ReadWriteData.readJsonArray() to load sessions from file
+            Global.sessionList = ReadWriteData.readJsonArray();
+        } catch (Exception e) {
+            // TODO: specify the exception and produce a more user-friendly message
+            e.printStackTrace();
+        }
+
+        // TEST CODE, REMOVE LATER
+        for (Session session : Global.sessionList) {
+
+            System.out.println(session.getSessionID() + 
+            " " + session.getDate() + 
+            " " + session.getTime() + 
+            " " + session.getDuration() + 
+            " " + session.getKeywords());
+        }
+
         OutputFormatter.banner();
 
-        for (OutputFormatter.prompt(); userInput.hasNextLine(); OutputFormatter.prompt()) {
-            
+        for (OutputFormatter.prompt(); Global.userInput.hasNextLine(); OutputFormatter.prompt()) {
+
             ArrayList<String> argumentList = new ArrayList<>();
-            Command command = new Command(userInput.nextLine().replaceAll("\n", " "), argumentList, false, false);
+            Command command = new Command(
+                    Global.userInput.nextLine().replaceAll("\n", " "),
+                    argumentList,
+                    false,
+                    false);
 
             while (command.isCommandProcessed() == false) {
-
-                CommandParser.parseCommand(command, userInput, fileReader);
-
+                CommandParser.parseCommand(command);
             }
         }
     }
-
 }

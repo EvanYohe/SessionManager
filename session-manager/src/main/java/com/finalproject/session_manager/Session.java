@@ -1,24 +1,24 @@
 package com.finalproject.session_manager;
 
-import java.sql.Time;
-import java.util.Date;
 import java.util.ArrayList;
 
 // Session Object Data Structure
+// This one feels very straightforward and doesn't bear much explanation
+// Just a custom data structure to hold the information of each session, with getters and setters
 public class Session {
 
     private String sessionID;
     private ArrayList<String> keywords;
-    private ArrayList<Topic> topics;
-    private Date date;
-    private Time time;
-    private Time duration;
+    private String date;
+    private String time;
+    private String duration;
 
-    public Session(Date date, Time time, Time duration, ArrayList<String> keywords, ArrayList<Topic> topics, String sessionID) {
+    public Session() {}
+    
+    public Session(String date, String time, String duration, ArrayList<String> keywords, String sessionID) {
 
         this.sessionID = sessionID;
         this.keywords = keywords;
-        this.topics = topics;
         this.date = date;
         this.time = time;
         this.duration = duration;
@@ -26,7 +26,7 @@ public class Session {
 
     public String getSessionID() {
 
-        return sessionID;
+        return this.sessionID;
     }
 
     public String setSessionID(String sessionID) {
@@ -37,7 +37,7 @@ public class Session {
 
     public ArrayList<String> getKeywords() {
 
-        return keywords;
+        return this.keywords;
     }
 
     public ArrayList<String> setKeywords(ArrayList<String> keywords) {
@@ -46,45 +46,34 @@ public class Session {
         return keywords;
     }
 
-    public ArrayList<Topic> getTopic() {
+    public String getDate() {
 
-        return topics;
+        return this.date;
     }
 
-    public ArrayList<Topic> setTopic(ArrayList<Topic> topics) {
-
-        this.topics = topics;
-        return topics;
-    }
-
-    public Date getDate() {
-
-        return date;
-    }
-
-    public Date setDate(Date date) {
+    public String setDate(String date) {
 
         this.date = date;
         return date;
     }
 
-    public Time getTime() {
+    public String getTime() {
 
-        return time;
+        return this.time;
     }
 
-    public Time setTime(Time time) {
+    public String setTime(String time) {
 
         this.time = time;
         return time;
     }
 
-    public Time getDuration() {
+    public String getDuration() {
 
-        return duration;
+        return this.duration;
     }
 
-    public Time setDuration(Time duration) {
+    public String setDuration(String duration) {
 
         this.duration = duration;
         return duration;

@@ -1,7 +1,6 @@
 package com.finalproject.data_pipe;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
@@ -9,48 +8,33 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import com.finalproject.Global;
+
 public class FileHandler {
 
-    //FINISHED
     // create a scanner object
     // call checkDataDirectory()
     // if checkDataDirectory() returns false, create directory and file
     // create and return a scanner object if file exists and can be read
     public static Scanner loadFile() {
 
-        File filePath = getDataFile().toFile();
-
+        // if the data directory does not exist, create it and a data file
         if (!checkDataDirectory()) {
             createDataDirectory();
             createDataFile();
         }
-
         try {
-            Scanner scanner = new Scanner(filePath);
+            // Create a scanner object
+            // This is the fileWriter Scanner object that is referenced in Global.java
+            Scanner scanner = new Scanner(Global.filePath);
             return scanner;
         } catch (IOException e) {
             System.err.format("IO Exception (most likely permissions): %s%n", e);
         }
-        // this feels wrong, address later
+        // TODO: Check before submitting
         return null;
     }
 
-    // TODO
-    // save file and close scanner
-    public static void unloadFile() {
-
-        // save the file
-        // close the scanner object
-    }
-
-    // TODO
-    // check if file is closed
-    public static boolean isFileUnloaded() {
-
-        return false;
-    }
-
-    // FINISHED
     // if data storage directory exists, return true
     public static boolean checkDataDirectory() {
 
@@ -60,34 +44,31 @@ public class FileHandler {
         return false;
     }
 
-    // FINISHED
     // return the data file as a path object
     public static Path getDataFile() {
 
+        // Grab the path of the data file from the path of the data directory
         Path path = Paths.get(getDataDirectory() + "/sessions.json");
-
         return path;
     }
 
-    // FINISHED
     // get the data storage directory
     // return the directory as a path object
-    // No matter what, this should always be the format of the storage directory
+    // no matter what, this should always be the path of the storage directory
     // (User Home Directory)/SessionManager/Data
     public static Path getDataDirectory() {
 
-        String dataDir = System.getProperty("user.home") + "/SessionManager/Data";
-        Path path = Paths.get(dataDir);
-
+        Path path = Paths.get(System.getProperty("user.home") + "/SessionManager/Data");
         return path;
     }
 
-    // FINISHED
-    // create a new file in the data storage directory
+    // create a new data file in the data storage directory
     public static void createDataFile() {
 
-        Path file = Paths.get(getDataDirectory() + "/sessions.json");
+        // get the path of the data file
+        Path file = getDataFile();
 
+        // create the file or catch an exception
         try {
             Files.createFile(file);
         } catch (FileAlreadyExistsException e) {
@@ -97,13 +78,14 @@ public class FileHandler {
         }
     }
 
-    //FINISHED
     // nagivate to user home directory on operating system
     // create a directory called (User Home Directory)/SessionManager/Data
     public static void createDataDirectory() {
 
+        // get the path of the data directory
         Path path = getDataDirectory();
 
+        // create the directory or catch an exception
         try {
             Files.createDirectories(path);
         } catch (FileAlreadyExistsException e) {
@@ -111,6 +93,5 @@ public class FileHandler {
         } catch (IOException e) {
             System.err.format("Create Directory error: %s%n", e);
         }
-        
     }
 }

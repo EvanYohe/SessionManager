@@ -2,18 +2,29 @@ package com.finalproject.output_formatter;
 
 public class OutputFormatter {
 
-    // FINISHED
+    // TODO: Implement the printSingleSession method
+    // format and print a single session
+    public static void printSingleSession(){
+
+    };
+
+    // TODO: Implement the formatList method
+    // format and print a list of sessions
+    public static void printSessionList(){
+
+    };
+
     // displays the help menu
     public static void help() {
 
         String[][] tableData = {
 
-            { "create", "Create a new session", "Date Time Duration Keyword(s) Topic(s)" },
-            { "delete", "Delete a session by ID", "sessionID" },
-            { "list", "Display a list sessions", "Range/Keyword/Topic will be prompted for filtering." },
-            { "edit", "Edit a session by ID", "sessionID" },
-            { "help", "Display this help message", "" },
-            { "exit", "Exit the program", "" }
+                { "create", "Create a new session", "Date Time Duration Keyword(s) Topic(s)" },
+                { "delete", "Delete a session by ID", "sessionID" },
+                { "list", "Display a list sessions", "Range/Keyword will be prompted for filtering." },
+                { "edit", "Edit a session by ID", "sessionID" },
+                { "help", "Display this help message", "" },
+                { "exit", "Exit the program", "" }
         };
 
         String format = "| %-8s | %-26s | %-51s |%n";
@@ -35,8 +46,7 @@ public class OutputFormatter {
         System.out.format(
                 "+----------+----------------------------+-----------------------------------------------------|%n");
     }
-    
-    // FINISHED
+
     // I wanted a banner
     public static void banner() {
 
@@ -49,7 +59,6 @@ public class OutputFormatter {
         System.out.println("Otherwise, enter a command:");
     }
 
-    // FINISHED
     // simple prompt for the program
     public static void prompt() {
 
