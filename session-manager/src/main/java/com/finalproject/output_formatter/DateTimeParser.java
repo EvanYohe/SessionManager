@@ -2,77 +2,86 @@ package com.finalproject.output_formatter;
 
 public class DateTimeParser {
 
-    // TODO: Implement the checkDateFormat method
-    public static boolean checkDateFormat(String date) {
+    // compares two dates to determine if the left date is before the right date
+    // used in merge sort and listing by date range
+    public static boolean compareSessionDate(String left, String right) {
 
-        String[] dateArray = date.split("-");
-        String month = dateArray[0];
-        String day = dateArray[1];
-        String year = dateArray[2];
+        String[] leftDate = left.split("-");
+        String[] rightDate = right.split("-");
 
-        if (month.length() != 2 || day.length() != 2 || year.length() != 4) {
-            return false;
+        if (Integer.parseInt(leftDate[0]) < Integer.parseInt(rightDate[0])) {
+
+            return true;
+        } else if (Integer.parseInt(leftDate[0]) == Integer.parseInt(rightDate[0])) {
+
+            if (Integer.parseInt(leftDate[1]) < Integer.parseInt(rightDate[1])) {
+
+                return true;
+            } else if (Integer.parseInt(leftDate[1]) == Integer.parseInt(rightDate[1])) {
+
+                if (Integer.parseInt(leftDate[2]) < Integer.parseInt(rightDate[2])) {
+
+                    return true;
+                }
+            }
         }
-
-        return true;
+        return false;
     }
 
-    // TODO: Implement the checkTimeFormat method
-    public static boolean checkTimeFormat(String time) {
-
-        String[] timeArray = time.split(":");
-        String hour = timeArray[0];
-        String minute = timeArray[1];
-        String second = timeArray[2];
-
-        if (hour.length() != 2 || minute.length() != 2 || second.length() != 2) {
-            return false;
-        }
-
-        return true;
-    }
-
-    // TODO: Implement the serializeDate method
-    public static String serializeDate(String date) {
-
-        String[] dateArray = date.split("-");
-        String month = dateArray[0];
-        String day = dateArray[1];
-        String year = dateArray[2];
-
-        return year + "-" + month + "-" + day;
-    }
-
-    // TODO: Implement the deserializeDate method
+    // deserializes date into readable format for listing
     public static String deserializeDate(String date) {
 
+        String[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
+                "Oct", "Nov", "Dec" };
+
         String[] dateArray = date.split("-");
-        String month = dateArray[0];
-        String day = dateArray[1];
-        String year = dateArray[2];
 
-        return year + "-" + month + "-" + day;
+        String year = dateArray[0];
+        String month = dateArray[1];
+        String day = dateArray[2];
+
+        if (day.charAt(0) == '0') {
+
+            day = day.substring(1, 2);
+        }
+        return months[Integer.parseInt(month) - 1] + " " + day + ", " + year;
     }
 
-    // TODO: Implement the serializeTime method
-    public static String serializeTime(String time) {
-
-        String[] timeArray = time.split(":");
-        String hour = timeArray[0];
-        String minute = timeArray[1];
-        String second = timeArray[2];
-
-        return hour + ":" + minute + ":" + second;
-    }
-
-    // TODO: Implement the deserializeTime method
+    // deserializes time into readable format for listing
     public static String deserializeTime(String time) {
 
         String[] timeArray = time.split(":");
-        String hour = timeArray[0];
-        String minute = timeArray[1];
-        String second = timeArray[2];
 
-        return hour + ":" + minute + ":" + second;
+        String minute = timeArray[1];
+
+        int hour = Integer.parseInt(timeArray[0]);
+
+        boolean isPM = false;
+
+        if (hour > 12) {
+
+            hour = hour - 12;
+            isPM = true;
+        } else if (hour == 12) {
+
+            isPM = true;
+        }
+        if (isPM) {
+
+            return hour + ":" + minute + " PM";
+        }
+        return hour + ":" + minute + " AM";
+    }
+
+    // deserializes duration into readable format for listing
+    public static String deserializeDuration(String duration) {
+
+        String[] durationArray = duration.split(":");
+
+        String minute = durationArray[1];
+
+        int hour = Integer.parseInt(durationArray[0]);
+
+        return hour + " h " + minute + " min";
     }
 }

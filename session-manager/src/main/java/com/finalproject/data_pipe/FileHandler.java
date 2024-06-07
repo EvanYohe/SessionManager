@@ -1,6 +1,7 @@
 package com.finalproject.data_pipe;
 
-import java.io.File;
+import com.finalproject.Global;
+
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
@@ -8,46 +9,41 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import com.finalproject.Global;
-
 public class FileHandler {
 
-    // create a scanner object
-    // call checkDataDirectory()
-    // if checkDataDirectory() returns false, create directory and file
-    // create and return a scanner object if file exists and can be read
+    // called at the start of the program to load the file into the scanner
     public static Scanner loadFile() {
 
-        // if the data directory does not exist, create it and a data file
         if (!checkDataDirectory()) {
+
             createDataDirectory();
             createDataFile();
         }
         try {
-            // Create a scanner object
-            // This is the fileWriter Scanner object that is referenced in Global.java
+
             Scanner scanner = new Scanner(Global.filePath);
             return scanner;
         } catch (IOException e) {
-            System.err.format("IO Exception (most likely permissions): %s%n", e);
+
+            System.err.format("IO Exception (most likely permissions reading from file denied): %s%n", e);
         }
         // TODO: Check before submitting
         return null;
     }
 
-    // if data storage directory exists, return true
+    // verifies data storage directory exists and is a directory
     public static boolean checkDataDirectory() {
 
         if (Files.exists(getDataDirectory()) && Files.isDirectory(getDataDirectory())) {
+
             return true;
         }
         return false;
     }
 
-    // return the data file as a path object
+    // returns the path to the data file
     public static Path getDataFile() {
 
-        // Grab the path of the data file from the path of the data directory
         Path path = Paths.get(getDataDirectory() + "/sessions.json");
         return path;
     }
@@ -62,35 +58,38 @@ public class FileHandler {
         return path;
     }
 
-    // create a new data file in the data storage directory
+    // called when no data file is found
+    // creates the data file
     public static void createDataFile() {
 
-        // get the path of the data file
         Path file = getDataFile();
 
-        // create the file or catch an exception
         try {
+
             Files.createFile(file);
         } catch (FileAlreadyExistsException e) {
+
             System.err.format("file named %s" + " already exists%n", file);
         } catch (IOException e) {
+
             System.err.format("Create File error: %s%n", e);
         }
     }
 
-    // nagivate to user home directory on operating system
-    // create a directory called (User Home Directory)/SessionManager/Data
+    // called when no storage directory is found
+    // creates the storage directory
     public static void createDataDirectory() {
-
-        // get the path of the data directory
+        
         Path path = getDataDirectory();
 
-        // create the directory or catch an exception
         try {
+
             Files.createDirectories(path);
         } catch (FileAlreadyExistsException e) {
+
             System.err.format("directory named %s" + " already exists%n", path);
         } catch (IOException e) {
+            
             System.err.format("Create Directory error: %s%n", e);
         }
     }
